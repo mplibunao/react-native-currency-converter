@@ -5,6 +5,7 @@ import { Container } from "../components/Container";
 import { Logo } from "../components/Logo";
 import { InputWithButton } from "../components/TextInput";
 import { ClearButton } from "../components/Buttons";
+import { LastCOnverted, LastConverted } from "../components/Text";
 
 const TEMP_BASE_CURRENCY = "USD";
 const TEMP_QUOTE_CURRENCY = "GBP";
@@ -48,6 +49,12 @@ class Home extends Component {
                     onPress={this.handlePressQuoteCurrency}
                     editable={false}
                     value={TEMP_QUOTE_PRICE}
+                />
+                <LastConverted
+                    base={TEMP_BASE_CURRENCY}
+                    quote={TEMP_QUOTE_CURRENCY}
+                    date={TEMP_CONVERSION_DATE}
+                    conversionRate={TEMP_CONVERSION_RATE}
                 />
                 <ClearButton
                     text="Reverse Currencies"
