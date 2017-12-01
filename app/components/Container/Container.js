@@ -1,4 +1,6 @@
-import React, { PropTypes } from "react";
+import React from "react";
+import { PropTypes } from "prop-types";
+
 import { View, TouchableWithoutFeedback, Keyboard } from "react-native";
 import styles from "./styles";
 
@@ -10,8 +12,8 @@ const Container = ({ children }) => (
     </TouchableWithoutFeedback>
 );
 
-// Container.propTypes = {
-//     children: PropTypes.any,
-// };
+Container.propTypes = {
+    children: PropTypes.any,
+};
 
 export default Container;
